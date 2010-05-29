@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Web 2.0 Programming</title>
+    <link rel="stylesheet" type="text/css" href="styles/default/review.css" />
+    <script type="text/javascript" src="lib/prototype/prototype.js"></script>
+    <script type="text/javascript" src="lib/scriptaculous/scriptaculous.js?load=effects"></script>
+		<script type="text/javascript" src="scripts/simple.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1>Web 2.0 Programming</h1>
+		<ul id="navigator">
+			<li id="hw"><a href="#">Homeworks</a></li>
+			<li id="proj"><a href="#">Project</a></li>
+			<li id="extra"><a href="#">Extra</a></li>
+		</ul>
+		<p><a id="export_summary" href="#">Export genneral summary</a></p>
+	</div>
+	
+	<div id="hw_charts">
+		<h2>homework chart</h2>
+		<div class="content">
+			Put your charts here.
+			<!--<div class="bar">sample</div>
+			<h3>Rank</h3>
+			<p>
+			bla bla
+			</p>
+			
+			<div class="bar">sample</div>
+			<h3>Score</h3>
+			<p>
+			bla bla
+			</p>
+		-->
+		</div>
+		<p class="expdf"><a id="expdf" href="#">Export as pdf</a></p>
+	</div>
+	<div id="overview">
+		<div class="entry">
+			<h3>Homework title</h3>
+			<p class="thumb"><a href="#"><img src="images/1.jpg" alt="hw1"/></a></p>
+			<dl>
+				<dt>Score: </dt><dd>90</dd>
+				<dt>Group ranking: </dt><dd>2/5</dd>
+				<dt>Class ranking: </dt><dd>12/60</dd>
+			</dl>
+			<p class="intro">Introduce here</p>
+		</div>
+		
+		<div class="entry">
+			<h3>Homework title</h3>
+			<p class="thumb"><a href="#"><img src="images/2.jpg" alt="hw2"/></a></p>
+			<dl>
+				<dt>Score: </dt><dd>90</dd>
+				<dt>Group ranking: </dt><dd>2/5</dd>
+				<dt>Class ranking: </dt><dd>12/60</dd>
+			</dl>
+			<p class="intro">Introduce here</p>
+		</div>
+		
+		<div class="entry">
+			<h3>Homework title</h3>
+			<p class="thumb"><a href="#"><img src="images/3.jpg" alt="hw3"/></a></p>
+			<dl>
+				<dt>Score: </dt><dd>90</dd>
+				<dt>Group ranking: </dt><dd>2/5</dd>
+				<dt>Class ranking: </dt><dd>12/60</dd>
+			</dl>
+			<p class="intro">Introduce here</p>
+		</div>
+		
+		<div class="entry">
+			<h3>Homework title</h3>
+			<p class="thumb"><a href="#"><img src="images/4.jpg" alt="hw4"/></a></p>
+			<dl>
+				<dt>Score: </dt><dd>90</dd>
+				<dt>Group ranking: </dt><dd>2/5</dd>
+				<dt>Class ranking: </dt><dd>12/60</dd>
+			</dl>
+			<p class="intro">Introduce here</p>
+		</div>
+		
+		<div class="entry">
+			<h3>Homework title</h3>
+			<p class="thumb"><a href="#"><img src="images/5.jpg" alt="hw5"/></a></p>
+			<dl>
+				<dt>Score: </dt><dd>90</dd>
+				<dt>Group ranking: </dt><dd>2/5</dd>
+				<dt>Class ranking: </dt><dd>12/60</dd>
+			</dl>
+			<p class="intro">Introduce here</p>
+		</div>
+	</div>
+	
+	<p class="clear" id="footer">&copy;2010 SYSU Web 2.0 programming community</p>
+</body>
+</html>
+
