@@ -108,9 +108,7 @@ img{
 }
 
 #hw_charts *{
-	width:692px;
 	margin:0 auto;
-	padding:10px;
 }
 
 
@@ -129,12 +127,31 @@ img{
 
 #hw_charts p.expdf{
 	background:url(../../images/chart_bottom.jpg) no-repeat;
+	clear: left;
 }
 
-#hw_charts .content{
+#hw_charts .content * {
 	height:231px;
-	width:712px;
-	padding:0 0 0 40px;
+	width: 320px;
+	float: left;
+}
+
+#hw_charts div.content{
+	position: relative; 
+	width: 680px;
+	height: 231px;
+}
+
+#hw_charts div.content div{
+	position: absolute;
+}
+
+#hw_charts div.content div#myScoreDiv{
+	left:10px;
+}
+
+#hw_charts div.content div#myRankDiv{
+	right:10px;
 }
 
 /*
@@ -175,7 +192,6 @@ img{
 #overview{
 	width:700px;
 	margin:0 auto;
-	background:yellow;
 }
 
 #overview .entry{
@@ -232,7 +248,7 @@ img{
 
 .entry ul {
 	list-style: none;
-	padding: 2.2em 1em 0 14em;
+	padding: 1.2em 1em 0 14em;
 }
 
 .entry p.intro{

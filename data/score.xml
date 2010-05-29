@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chart caption='Homework Scores Trend' xAxisName='Homework' yAxisName='Score' showValues='1' formatNumberScale='0' showBorder='0' bgColor='999999,FFFFFF' bgAlpha='50' >
+    <set label='hw1' value='64' />
+    <set label='hw2' value='74' />
+    <set label='hw3' value='69' />
+    <set label='hw4' value='82' />
+    <set label='hw5' value='70' />
+    <set label='hw6' value='74' />
+</chart>
