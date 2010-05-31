@@ -75,6 +75,12 @@ img{
 	background:url(../../images/nav.gif) no-repeat;
 }
 
+#header a#logout {
+	position:absolute;
+	right:138px;
+	top:115px;
+}
+
 /*link*/
 #header #navigator li#hw a{
 	background-position:0 0;
@@ -180,7 +186,7 @@ img{
 	float:right;
 	background:url(../../images/expdf.gif) no-repeat;
 	text-indent:-3000px;
-	padding-top:10px;
+	padding-top:15px;
 }
 
 #hw_charts p.expdf a:hover,
@@ -268,3 +274,55 @@ img{
 .clear{
 	clear:both;
 }
+
+/********** login *********/
+div#main h1{
+	color: #6699CC;
+	text-align: center;
+}
+
+div#main div#errors {
+	color: red;
+	text-align: center;
+	font-size: 150%;
+	padding: 5px;
+}
+
+form#login label.label-text {
+	float: left;
+	margin: 0 1em 0 1em;
+	text-align: right;
+	width: 9em;
+}
+
+form#login legend {
+	background-color: white;
+	border: 1px solid black;
+	padding: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+form#login fieldset {
+	width: 25em;
+	border:groove 2px black;
+	background-color: #E7EFFF;
+	margin: 3em auto 3em auto;
+	text-align: left;
+}
+
+form#login input {
+	margin-bottom: 0.5em;
+}
+
+form#login input[type="checkbox"]{
+	text-align: left;
+}
+
+form#login .buttons {
+	text-align: center;
+	margin-top: 1em;
+	font-size: 1.5em;
+}
+
+
+

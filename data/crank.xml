@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <chart caption='Homework Rank Trend' xAxisName='Homework' yAxisName='Rank' showValues='1' showYAxisValues='0' formatNumberScale='0' showBorder='0' bgColor='999999,FFFFFF' bgAlpha='50' >
-    <set label='hw1' value='38' displayValue='24' />
-    <set label='hw2' value='48' displayValue='14' />
-    <set label='hw3' value='53' displayValue='9'/>
+    <set label='hw1' value='38' displayValue='dfdsf' />
+    <set label='hw2' value='48' displayValue='sdf' />
+    <set label='hw3' value='53' displayValue='afd'/>
     <set label='hw4' value='30' displayValue='32'/>
     <set label='hw5' value='42' displayValue='20'/>
     <set label='hw6' value='39' displayValue='23'/>

@@ -8,6 +8,9 @@
 define('STUDENTS_FILE', 'data/students.csv');
 define('HOMEWORKS_FILE', 'data/homeworks.csv');
 define('RESULTS_FILE', 'data/results.csv');
+define('SCORE_TEMPLATE', 'data/score.xml.template');
+define('RANK_TEMPLATE', 'data/rank.xml.template');
+define('TOTAL_STUDENT_NUMBER', 62);
 
 class Student {
 	public $id, $name, $class_name, $hw_results;
@@ -41,8 +44,8 @@ class HomeworkResult {
 		$this->sid = $sid;
 		$this->hid = $hid;
 		$this->score = $score;
-		$this->grank = $grank;
-		$this->crank = $crank;
+		$this->grank = (int) $grank;
+		$this->crank = (int) $crank;
 	}
 }
 
@@ -116,7 +119,8 @@ function getHomework($hid){
 function loadThumbnail($sid, $hw){
 	$file = getThumbnailFile($sid, $hw->id);
 	if(!file_exists($file)){
-		snapshot(getHWHttp($sid, $hw), $file);
+		// uncomment this line when all hws are placed properly
+		// snapshot(getHWHttp($sid, $hw), $file);
 	}
 }
 
@@ -138,4 +142,25 @@ function getHWFtp($sid, $hw){
 	eval("\$ftp = \"$hw->ftp\";");
 	return $ftp;
 }
+
+function getScoreXML($student){
+	$template = file_get_contents(SCORE_TEMPLATE);
+	$data = '';
+	foreach($student->hw_results as $key => $hwr){
+		$data .= "<set label='hw" . $key. "' value='" . $hwr->score . "' />";
+	}
+	eval("\$xml = \"$template\";");
+	return $xml;
+}
+
+function getRankXML($student){
+	$template = file_get_contents(RANK_TEMPLATE);
+	$data = '';
+	foreach($student->hw_results as $key => $hwr){
+		$data .= "<set label='hw" . $key. "' value='" . (TOTAL_STUDENT_NUMBER - $hwr->crank) . "' displayValue='" . $hwr->crank . "' />";
+	}
+	eval("\$xml = \"$template\";");
+	return $xml;
+}
+
 ?>

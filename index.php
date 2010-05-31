@@ -7,33 +7,34 @@
 require "snapshot.php";
 require "web2.php";
 require "lib/fusioncharts/FusionCharts.php";
-require "templates/header.php";
 
 
 // start program
-//session_start();
+session_start();
 if(!isset($_SESSION["student_id"])){
-//	header("Location: login.php");
-//	exit;
-	$_SESSION["student_id"] = "07302950";
+	session_destroy();
+	header("Location: login.php");
+	exit(0);
+//	$_SESSION["student_id"] = "07302941";
 }
+
 loadData();
 $student = getStudent($_SESSION["student_id"]);
 if($student == null) {
 	session_unset();
 	die("Couldn't retrieve student with id ".$_SESSION['student_id']);
 }
+
+require "templates/header.php";
+
 ?>
 
 <div id="hw_charts">
 	<h2>homework chart</h2>
 	<div class="content">
 		<?php 
-			//TODO: fade chart with dynamic data, maybe by data.php
-			echo renderChart("lib/fusioncharts/charts/Line.swf", "data/score.xml", "", "myScore", 0, 0, false, false);
-			echo renderChart("lib/fusioncharts/charts/Line.swf", "data/crank.xml", "", "myRank", 0, 0, false, false);
-//			echo renderChart("lib/fusioncharts/charts/Line.swf", getScoreXML($student), "", "myScore", 0, 0, false, false);
-//			echo renderChart("lib/fusioncharts/charts/Line.swf", getRankXML($student), "", "myRank", 0, 0, false, false);
+			echo renderChart("lib/fusioncharts/charts/Line.swf", "", getScoreXML($student), "myScore", 0, 0, false, false);
+			echo renderChart("lib/fusioncharts/charts/Line.swf", "", getRankXML($student), "myRank", 0, 0, false, false);
 		?>
 		</div>
 		<!--<div class="bar">sample</div>
@@ -81,5 +82,4 @@ foreach($student->hw_results as $result){
 	
 <?php 
 require "templates/footer.php";
-session_unset();
 ?>
